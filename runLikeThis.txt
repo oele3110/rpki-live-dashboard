@@ -1,0 +1,15 @@
+
+
+python bgpmonParser.py -u -w -h livebgp.netsec.colostate.edu -p 50001 -t 600 -f riswhoisdump.IPv4 | ./validator rpki.realmv6.org 42420 | sudo python ribToSql.py
+python bgpmonParser.py -u -w -h livebgp.netsec.colostate.edu -p 50001 -t 600 -f riswhoisdump.IPv4 | ./validator rpki-validator.realmv6.org 8282 | sudo python ribToSql.py
+
+
+1.
+python bgpmonParser.py -u -w -h livebgp.netsec.colostate.edu -p 50001 -t 5 -f riswhoisdump.IPv4
+
+2. 
+./validator rpki.realmv6.org 42420
+./validator rpki-validator.realmv6.org 8282
+
+3.
+sudo python ribToSql.py
