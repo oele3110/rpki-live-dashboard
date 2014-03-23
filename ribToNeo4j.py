@@ -36,7 +36,7 @@ class Vrp:
 			return False
 
 	def __hash__(self):
-		return hash(str(self))
+		return hash(str(self.asn)+str(self.ip)+str(self.max)+str(self.min)+str(self.binary))
 
 	def setId(self, id):
 		self.id=id
@@ -234,32 +234,37 @@ def main():
 	file = open("dataset" + str(datasetId), "w")
 	file2 = open("dataset_vrp" + str(datasetId), "w")
 	"""
-	
+
 	# debug, comment next for loop if use
-	#"""
+	"""
 	lines = ("-1|186.17.16.0 20 23201", "1|200.35.183.0 24 26617|26617 200.35.176.0 20 24", "1|5.149.83.0 24 59457|35567 5.149.64.0 19 24,59457 5.149.64.0 19 24", "1|80.79.148.0 22 34708|6453 80.79.144.0 20 24,9051 80.79.144.0 20 24,34708 80.79.144.0 20 24,39275 80.79.144.0 20 24", "0|198.176.45.0 24 55079|6079 198.176.44.0 22 24,6939 198.176.44.0 22 24,12271 198.176.44.0 22 24,20473 198.176.44.0 22 24,36236 198.176.44.0 22 24", "Next")
 	for line in lines:
-	#"""
-	
+	"""
+	print "start"
+	print str(getTimestamp())
+	file = open("sql_input", "r")
+	for line in file:
 	# receive the rib data via pipe
 	#for line in fileinput.input():
-		print line
 		# now the parser collects new data, so we truncate the tables and insert our collected data
 		if "Next" in line:
-			
 			print str(getTimestamp())
 			
 			# truncate graph db
 			print "truncate old data"
 			truncateDatabase()
 			
+			print "vrp: " + str(len(dictVrp))
+			print "routes: " + str(len(listRoutes))
+
 			# insert data from dict into graph db
 			print "insert vrp data"
 			insertNeo4jFromDictVrp(dictVrp)
 
+			print str(getTimestamp())
+
 			print "insert routes data"
 			insertNeo4jFromListRoutes(listRoutes)
-			
 			
 			print str(getTimestamp())
 			
@@ -395,6 +400,8 @@ def main():
 		
 		#else:
 			#print "No pattern matched"
+	print "end"
+	print str(getTimestamp())
 		
 
 
