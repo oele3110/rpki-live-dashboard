@@ -1,0 +1,21 @@
+##### Read File #####
+start reading
+finished
+R Lists sizes: 505734
+V Lists sizes: 8429
+Duration: 4338 ms
+
+
+##### SQL #####
+Start inserting values
+Truncate Route data
+Inserting Route data
+Duration Routes: 479062 ms
+finished routes
+Truncate VRP data
+Inserting VRP data
+Duration VRP: 7370 ms
+finished VRP
+finished
+Duration: 488752 ms
+
