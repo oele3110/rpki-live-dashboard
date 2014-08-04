@@ -1,0 +1,9 @@
+start reading data
+reading: 1730ms
+ROUTES
+execute: 402574ms
+commit: 47ms
+VRP
+execute: 6205ms
+commit: 34ms
+
