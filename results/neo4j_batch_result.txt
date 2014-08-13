@@ -1,0 +1,20 @@
+##### Read File #####
+start reading
+finished
+R Lists sizes: 505734
+V Lists sizes: 8429
+Duration: 4255 ms
+
+
+##### Neo4j #####
+/home/skims/Downloads/neo4j-community-2.0.1/data/graph.db2
+Inserting routes data
+Duration routes: 7513 ms
+finished routes
+Inserting VRP data
+Duration routes: 112 ms
+finished VRP
+Duration inserter shutdown: 138467ms
+inserter shutdown
+Duration for all operations: 146095ms
+
