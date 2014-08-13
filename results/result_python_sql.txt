@@ -7,3 +7,5 @@ VRP
 execute: 6205ms
 commit: 34ms
 
+SQL
+duration: 408860ms
