@@ -1,0 +1,19 @@
+##### Read File #####
+start reading
+finished
+R Lists sizes: 505734
+V Lists sizes: 8429
+Duration: 2734 ms
+
+
+##### Neo4j #####
+C:\Users\Oele\Documents\Neo4j\default.graphdb
+Inserting VRP data
+Duration VRP: 552 ms
+finished VRP
+Inserting routes data
+Duration routes: 4795 ms
+finished routes
+Duration inserter shutdown: 22036ms
+inserter shutdown
+Duration for all operations: 27384ms
