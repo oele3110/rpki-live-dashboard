@@ -1,0 +1,20 @@
+##### Read File #####
+start reading
+finished
+R Lists sizes: 505734
+V Lists sizes: 8429
+Duration: 2048 ms
+##### Inserting route nodes into tree #####
+Duration: 9298 ms
+Number of nodes (inclusive root node): 2040896
+Inserting VRP data
+Duration VRP: 1145 ms
+finished VRP
+Inserting Route data
+Duration routes: 13699 ms
+finished routes
+shutting down inserter
+inserter shutdown
+Duration inserter shutdown: 83800ms
+Duration for all operations: 98646ms
+
